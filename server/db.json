@@ -1,0 +1,32 @@
+{
+  "food-trucks": [
+    {
+      "id": 1,
+      "field": "field 1",
+      "title": "Title 1",
+      "placeholder": "Placeholder 1",
+      "constraints": "Constraints 1"
+    },
+    {
+      "id": 2,
+      "field": "field 2",
+      "title": "Title 2",
+      "placeholder": "Placeholder 2",
+      "constraints": "Constraints 2"
+    },
+    {
+      "field": "field 3",
+      "title": "asd",
+      "placeholder": "asd",
+      "constraints": "asd",
+      "id": 3
+    },
+    {
+      "field": "ser",
+      "title": "ser",
+      "placeholder": "ser",
+      "constraints": "ser",
+      "id": 4
+    }
+  ]
+}

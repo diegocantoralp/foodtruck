@@ -1,0 +1,25 @@
+<h2>{{ editMode ? 'Edit Field' : 'New Field' }}</h2>
+<div class="form-section">
+  <form (submit)="onSubmit()" #foodtruckForm='ngForm' class="form-row">
+    <mat-form-field>
+      <input matInput placeholder="Field" name="field" required [(ngModel)]="foodtruck.field">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Title" name="title" required [(ngModel)]="foodtruck.title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Placeholder" name="placeholder" required [(ngModel)]="foodtruck.placeholder">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Constraints" name="constraints" required [(ngModel)]="foodtruck.constraints">
+    </mat-form-field>
+    <ng-container *ngIf="editMode; else elseTemplate">
+      <button mat-raised-button color="primary">Update</button>
+      <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+      <button mat-raised-button color="warn" (click)="onCancelAdd()">Cancel</button>
+    </ng-template>
+  </form>
+</div>
